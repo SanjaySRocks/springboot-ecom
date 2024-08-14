@@ -1,9 +1,6 @@
 package com.sanjay.ecom.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +8,9 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@Data
 public class Product {
 
     @Id
@@ -29,6 +25,32 @@ public class Product {
     private boolean available;
     private int quantity;
 
+    private String imageName;
+    private String imageType;
+    @Lob
+    private byte[] imageData;
 
+    public String getImageName() {
+        return imageName;
+    }
 
+    public String getImageType() {
+        return imageType;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public void setImageType(String imageType) {
+        this.imageType = imageType;
+    }
+
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
+    }
 }
