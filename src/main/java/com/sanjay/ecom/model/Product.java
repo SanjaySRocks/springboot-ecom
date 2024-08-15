@@ -31,27 +31,5 @@ public class Product {
     @Lob
     private byte[] imageData;
 
-    public String getImageName() {
-        return imageName;
-    }
 
-    public String getImageType() {
-        return imageType;
-    }
-
-    public byte[] getImageData() {
-        return imageData;
-    }
-
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
-    }
-
-    public void setImageType(String imageType) {
-        this.imageType = imageType;
-    }
-
-    public void setImageData(byte[] imageData) {
-        this.imageData = imageData;
-    }
 }
